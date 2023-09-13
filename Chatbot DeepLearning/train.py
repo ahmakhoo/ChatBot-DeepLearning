@@ -2,6 +2,8 @@ if __name__ == "__main__":
     import multiprocessing
     multiprocessing.freeze_support()
 
+# Import necessary libraries
+
 import numpy as np
 import random
 import json
@@ -20,6 +22,7 @@ with open('knowledge.json', 'r') as f:
 
 # print(knowledge)
 
+# create list to store all words and tags
 all_words = []
 tags = []
 empty = []
@@ -106,7 +109,7 @@ for epoch in range(num_epochs):
 
 print(f'final loss , loss={loss.item():.3f}')  
 
-
+# save the trained model/data into a pth file for final chatbot
 data = {
     "model_state": model.state_dict(),
     "input_size": input_size,

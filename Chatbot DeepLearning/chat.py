@@ -1,3 +1,4 @@
+# Once again import all necessary libraries
 import random
 import json
 import torch
@@ -6,6 +7,7 @@ from Prototype import bag_of_words, tokenize, stem
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+# Load the knowledge based json file
 with open('knowledge.json', 'r') as f:
     knowledge = json.load(f)
 
